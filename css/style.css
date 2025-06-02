@@ -1,0 +1,205 @@
+/* Background principal verde musgo */
+.section1 {
+  background-color: #556B2F; /* verde musgo */
+}
+
+/* Texto de parabéns em bege claro */
+.congratulation-text {
+  font-family: 'Arial';
+  font-size: 87px;
+  color: #DAD9C4; /* bege claro */
+  margin-top: 10%;
+  display: none;
+}
+
+/* Botão rosa trocado por verde claro, com hover */
+.section1 button.pink {
+  background-color: #A2C523; /* verde claro */
+  color: #fff;
+  font-family: 'Arial';
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.section1 button.pink:hover {
+  background-color: #8CAF1F; /* verde mais escuro no hover */
+}
+
+/* Tamanho fixo para imagens pequenas */
+img.fix-size {
+  width: 130px;
+  height: 130px;
+}
+
+/* Texto de erro em coral suave */
+.text-error {
+  color: #e31300;
+}
+
+/* Caixa de texto com texto claro */
+#textMachine {
+  height: 130px;
+  display: none;
+  overflow: hidden;
+  color: #DAD9C4;
+}
+
+/* Posicionamento da login-form */
+.section1 .login-form {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 0;
+}
+
+/* Imagem responsiva */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Fonte customizada mantida */
+@font-face {
+  font-family: 'DBHX';
+  src: url('../fonts/DB Helvethaica X v3.2.eot');
+  src: url('../fonts/DB Helvethaica X v3.2.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DB Helvethaica X v3.2.woff') format('woff'),
+       url('../fonts/DB Helvethaica X v3.2.ttf') format('truetype'),
+       url('../fonts/DB Helvethaica X v3.2.svg#d6a7d8571348c8a262e7f05953d42d15') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Outras seções com fundo clarinho para contraste */
+.section5,
+.section3 {
+  background-color: #E9F0D6; /* verde clarinho, quase bege */
+}
+
+/* Títulos h2 em verde escuro */
+.section6 h2,
+.section4 h2,
+.section2 h2 {
+  color: #3B4D12;
+}
+
+/* Texto de parágrafos em verde musgo escuro */
+.section3 .paragraph,
+.section5 .paragraph {
+  color: #3B4D12;
+}
+
+/* Títulos h2 nessas seções em verde escuro */
+.section3 h2,
+.section5 h2 {
+  color: #3B4D12;
+}
+
+/* Títulos principais em Playball, verde claro */
+.section1 h2,
+.section3 h2,
+.section4 h2,
+.section5 h2,
+.section6 h2,
+.section2 h2 {
+  padding-top: 40px;
+  font-family: "Playball";
+  font-size: 64px;
+  text-align: center;
+  color: #A2C523; /* verde claro para destaque */
+}
+
+/* Parágrafos com espaçamento e cor clara */
+.paragraph {
+  padding-top: 120px;
+  line-height: 50px;
+  color: #3B4D12; /* tom mais suave */
+}
+
+/* Área de sucesso escondida */
+.success-area {
+  display: none;
+}
+
+/* Polaroids estilo mantido, ajustando cor do texto */
+.polaroids {
+  padding: 40px 0px;
+}
+
+.polaroid-row {
+  display: flex;
+  align-items: center;
+}
+
+.polaroids {
+  padding: 0; /* reduzido para alinhar melhor verticalmente */
+}
+
+.polaroids ul li {
+  margin: 0 10px 10px;
+  position: relative;
+  display: inline-block;
+  list-style: none;
+}
+
+.polaroids ul li .pin {
+  margin-left: -16px;
+  background-image: url(http://martijndevalk.nl/img/pin.png);
+  width: 34px;
+  height: 42px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  z-index: 6;
+}
+
+.polaroids ul a {
+  padding: 10px 10px 15px;
+  background-color: #fff;
+  float: left;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #556B2F; /* verde musgo escuro */
+  font-size: 18px;
+  position: relative;
+  transform-origin: top center;
+  transform: rotate(0deg);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+}
+
+.polaroids ul li a.shake {
+  animation-duration: 4500ms;
+  animation-name: pola;
+  transition-timing-function: cubic-bezier(0.655, 0.000, 0.005, 1.000);
+}
+
+.polaroids ul a:after {
+  content: attr(title);
+  color: #A2C523;
+}
+
+.polaroids ul img {
+  display: block;
+  width: 262px;
+  margin-bottom: 12px;
+}
+
+/* Keyframes animados mantidos */
+@keyframes pola {
+  from { transform: rotate(0deg); }
+  10% { transform: rotate(3deg); }
+  20% { transform: rotate(-3deg); }
+  30% { transform: rotate(2deg); }
+  40% { transform: rotate(-2deg); }
+  50% { transform: rotate(1deg); }
+  60% { transform: rotate(-1deg); }
+  70% { transform: rotate(0.5deg); }
+  80% { transform: rotate(-0.5deg); }
+  90% { transform: rotate(0.2deg); }
+  to { transform: rotate(0deg); }
+}
