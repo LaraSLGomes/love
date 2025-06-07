@@ -1,20 +1,23 @@
 /* Background principal verde musgo */
 .section1 {
-  background-color: #556B2F; /* verde musgo */
+  background-color: #556B2F;
+  padding: 60px 20px; /* adiciona padding pra controlar altura e dar respiro */
+  position: relative; /* necessário pro .login-form */
 }
 
 /* Texto de parabéns em bege claro */
 .congratulation-text {
   font-family: 'Arial';
   font-size: 87px;
-  color: #DAD9C4; /* bege claro */
-  margin-top: 10%;
+  color: #DAD9C4;
+  margin-top: 40px;
   display: none;
+  text-align: justify;
 }
 
 /* Botão rosa trocado por verde claro, com hover */
 .section1 button.pink {
-  background-color: #A2C523; /* verde claro */
+  background-color: #A2C523;
   color: #fff;
   font-family: 'Arial';
   font-size: 25px;
@@ -23,10 +26,11 @@
   padding: 10px 20px;
   border-radius: 6px;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .section1 button.pink:hover {
-  background-color: #8CAF1F; /* verde mais escuro no hover */
+  background-color: #8CAF1F;
 }
 
 /* Tamanho fixo para imagens pequenas */
@@ -48,12 +52,15 @@ img.fix-size {
   color: #DAD9C4;
 }
 
-/* Posicionamento da login-form */
+/* Centraliza a login-form */
 .section1 .login-form {
   position: absolute;
-  top: 30%;
-  right: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
 }
 
 /* Imagem responsiva */
@@ -62,7 +69,7 @@ img {
   height: auto;
 }
 
-/* Fonte customizada mantida */
+/* Fonte customizada */
 @font-face {
   font-family: 'DBHX';
   src: url('../fonts/DB Helvethaica X v3.2.eot');
@@ -74,50 +81,42 @@ img {
   font-weight: 400;
 }
 
-/* Outras seções com fundo clarinho para contraste */
+/* Outras seções com fundo clarinho */
+.section2,
+.section3,
+.section4,
+.section5,
+.section6 {
+  padding: 60px 20px; /* padroniza altura interna de todas */
+}
+
 .section5,
 .section3 {
-  background-color: #E9F0D6; /* verde clarinho, quase bege */
+  background-color: #E9F0D6;
 }
 
 /* Títulos h2 em verde escuro */
-.section6 h2,
-.section4 h2,
-.section2 h2 {
-  color: #3B4D12;
-}
-
-/* Texto de parágrafos em verde musgo escuro */
-.section3 .paragraph,
-.section5 .paragraph {
-  color: #3B4D12;
-}
-
-/* Títulos h2 nessas seções em verde escuro */
-.section3 h2,
-.section5 h2 {
-  color: #3B4D12;
-}
-
-/* Títulos principais em Playball, verde claro */
-.section1 h2,
+.section2 h2,
 .section3 h2,
 .section4 h2,
 .section5 h2,
-.section6 h2,
-.section2 h2 {
-  padding-top: 40px;
+.section6 h2 {
+  color: #A2C523;
   font-family: "Playball";
   font-size: 64px;
   text-align: center;
-  color: #A2C523; /* verde claro para destaque */
+  margin-bottom: 20px;
 }
 
-/* Parágrafos com espaçamento e cor clara */
+/* Texto de parágrafos */
+.section3 .paragraph,
+.section5 .paragraph,
 .paragraph {
-  padding-top: 120px;
-  line-height: 50px;
-  color: #3B4D12; /* tom mais suave */
+  padding-top: 20px;
+  line-height: 1.8em;
+  font-size: 20px;
+  color: #3B4D12;
+  text-align: justify;
 }
 
 /* Área de sucesso escondida */
@@ -125,18 +124,19 @@ img {
   display: none;
 }
 
-/* Polaroids estilo mantido, ajustando cor do texto */
-.polaroids {
-  padding: 40px 0px;
-}
-
+/* Polaroids alinhadas ao conteúdo */
 .polaroid-row {
   display: flex;
-  align-items: center;
+  align-items: center; /* alinha verticalmente no centro do texto */
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* garante responsividade */
+  padding: 40px 0;
 }
 
-.polaroids {
-  padding: 0; /* reduzido para alinhar melhor verticalmente */
+.polaroids ul {
+  padding: 0;
+  margin: 0;
 }
 
 .polaroids ul li {
@@ -164,7 +164,7 @@ img {
   width: auto;
   text-align: center;
   text-decoration: none;
-  color: #556B2F; /* verde musgo escuro */
+  color: #556B2F;
   font-size: 18px;
   position: relative;
   transform-origin: top center;
@@ -189,7 +189,31 @@ img {
   margin-bottom: 12px;
 }
 
-/* Keyframes animados mantidos */
+.section5 .polaroid-row {
+  align-items: center; /* mantém o centralizado vertical */
+  padding-top: 20px; /* um leve ajuste pra dar mais equilíbrio visual */
+  margin-top: 160px;
+}
+
+.section4 .polaroid-row {
+  align-items: center; /* mantém o centralizado vertical */
+  padding-top: 20px;
+  margin-top: 340px;
+}
+
+.section6 .polaroid-row {
+  align-items: center; /* mantém o centralizado vertical */
+  padding-top: 20px;
+  margin-top: 220px;
+}
+
+.section3 .polaroid-row {
+  align-items: center; /* mantém o centralizado vertical */
+  padding-top: 20px;
+  margin-top: 17px;
+}
+
+/* Keyframes animados */
 @keyframes pola {
   from { transform: rotate(0deg); }
   10% { transform: rotate(3deg); }
