@@ -1,8 +1,9 @@
 /* Background principal verde musgo */
 .section1 {
   background-color: #556B2F;
-  padding: 60px 20px; /* adiciona padding pra controlar altura e dar respiro */
-  position: relative; /* necessário pro .login-form */
+  /* Reduz o padding superior e inferior para encolher a altura da seção */
+  padding: 20px 20px; /* Altere de 60px para 20px (ou um valor menor como 10px, 5px, etc.) */
+  position: relative;
 }
 
 /* Texto de parabéns em bege claro */
